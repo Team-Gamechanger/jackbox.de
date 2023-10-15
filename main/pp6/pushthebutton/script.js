@@ -12580,7 +12580,7 @@ class si {
                 TV_SENTRY_DSN: "https://bb026273d98c4b99ab11c1de369f521f@o420318.ingest.sentry.io/6387933",
                 TV_SENTRY_RATE: "0.2",
                 TV_SLACK_DEBUG: "https://hooks.slack.com/services/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",
-                TV_TWITCH_CLIENT_ID: "yn2iepd23vskpmkzgeg2lkfsct7gsc",
+                TV_TWITCH_CLIENT_ID: "32ghgheygev2ibgh1tiizcphlt8ll3",
                 BASE_URL: "https://bundles.jackbox.tv/main/pp6-pushthebutton/",
                 MODE: "production",
                 DEV: !1,
@@ -13159,7 +13159,7 @@ const vC = `<form>\r
         <div class="inputGroup">\r
             <textarea id="input-text-textarea" rows="1" class="form-control jbg-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>\r
             <span class="inlineSubmit">\r
-                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Send</span></button>\r
+                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Senden</span></button>\r
             </span>\r
             <span id="helpBlock2" class="help-block errorText"></span>\r
             <div class="charCountDisplay"><span class="charRemaining">70</span></div>\r
@@ -16281,7 +16281,7 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         <div id="buttons" class="buttons"></div>\r
         <div id="post-sketchpad" class="post-sketchpad">\r
             <div id="submit">\r
-                <button id='submitdrawing' class="button submitDrawing">Submit</button><br/>\r
+                <button id='submitdrawing' class="button submitDrawing">Absenden</button><br/>\r
             </div>\r
             <button id='censorOptions' class='button'>Censor Options</button>\r
             <div class="footer"></div>\r
@@ -16317,9 +16317,9 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             disabled: !1,
             debug: !1,
             strings: {
-                drawing_empty: "You must draw something!",
-                submit: "submit",
-                ERROR_REJECTED_OBJECT: "That's not allowed, enter something else!"
+                drawing_empty: "Du musst etwas zeichnen!",
+                submit: "senden",
+                ERROR_REJECTED_OBJECT: "Das ist nicht erlaubt! Gib etwas anderes ein!"
             }
         }
     }),
@@ -16361,7 +16361,7 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 visible: !0,
                 updateView: !0,
                 onGet(t) {
-                    return t[0] || t[1] ? !1 : t[2] === void 0 ? "" : t[2].submit || "Submit"
+                    return t[0] || t[1] ? !1 : t[2] === void 0 ? "" : t[2].submit || "Senden"
                 }
             }
         },
@@ -16521,7 +16521,7 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         defaults: {
             state: "EnterSingleText",
             actions: [{
-                text: "submit",
+                text: "Senden",
                 action: "submit"
             }],
             allowEmpty: !1,
@@ -16538,11 +16538,11 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             autocapitalize: !1,
             className: "",
             inlineSubmit: !1,
-            inlineSubmitText: "Submit",
+            inlineSubmitText: "Senden",
             error: "",
             strings: {
-                ERROR_NOTHING_ENTERED: "You need to enter something!",
-                ERROR_REJECTED_TEXT: "That's not allowed, enter something else! (You can change the level of filtering in the game's settings menu)"
+                ERROR_NOTHING_ENTERED: "Du musst etwas eingeben!",
+                ERROR_REJECTED_TEXT: "Das ist nicht erlaubt, gib etwas anderes ein! (Du kannst die Moderationseinstellungen in den Optionen anpassen)"
             }
         }
     }),
@@ -16612,7 +16612,7 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             }), this.inputComponent = this.inputComponent || new ro({
                 model: new Ue.Model({})
             }), this.buttonsCollection = this.buttonsCollection || new Ue.Collection([{
-                text: "submit"
+                text: "Senden"
             }]), this.buttonsComponent = this.buttonsComponent || new Vn({
                 block: !0,
                 collection: this.buttonsCollection
@@ -16625,7 +16625,7 @@ const NC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             })), this.promptComponent.model.clear({
                 silent: !0
             }).set(this.model.get("prompt")), this.inputComponent.model.set(this.model.attributes), this.buttonsComponent.options.block = this.model.get("block"), this.buttonsCollection.set(this.model.get("actions") || [{
-                text: "submit",
+                text: "Senden",
                 action: "submit"
             }]), this.model.get("entryId") && this.model.get("entryId") !== this.currentEntry && (this.inputComponent.clearInput(), this.currentEntry = this.model.get("entryId")), this.$el.find(".enterSingleTextFieldset").prop("disabled", !1), this.$el.find("textarea").focus(), this.stickit(), this.model.get("autoSubmit") && this.shouldSubmit && this.onChildviewInputSubmit()
         },
@@ -16807,8 +16807,8 @@ rt.View.extend({
     },
     onRoomWasDestroyed() {
         Zt.remove("roomCode"), Zt.remove("reconnect"), xt.show("error", {
-            titleText: "Disconnected",
-            text: "Thanks for playing!",
+            titleText: "Verbindung getrennt",
+            text: "Danke für's spielen!",
             willClose: () => {
                 window.location.reload(!0)
             }
@@ -16816,8 +16816,8 @@ rt.View.extend({
     },
     onDisconnected() {
         xt.show("error", {
-            titleText: "Disconnected",
-            text: "You have been disconnected.",
+            titleText: "Verbindung getrennt",
+            text: "Deine Verbindung wurde getrennt.",
             willClose: () => {
                 window.location.reload(!0)
             }
@@ -16886,28 +16886,28 @@ const zC = `<div id="controller" class="state-controller controller-content">
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
-                vip_postgame: "What would you like to do now?",
-                vip_episodes_menu: "Episodes Menu",
-                vip_episodes_unload: "Unload Episode",
-                vip_episodes_report: "Report Episode",
-                vip_episodes_warning: "Warning: user generated content is not rated",
-                vip_episodes_load: "Load an episode by id:",
-                vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
-                vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
-                button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
-                prompt_choosecharacter: "Select your character",
-                button_censorOptions: "Censor Options",
+                wait: "Lehn dich zurück und entspanne!",
+                vip_waiting: "Warte auf die anderen Spieler",
+                vip_canStart: "Drücke diesen Knopf, wenn alle bereit sind",
+                vip_cancel: "Drücke diesen Knopf, um den Spielstart abzubrechen",
+                vip_postgame: "Was möchtet ihr jetzt machen?",
+                vip_episodes_menu: "Episoden Menü",
+                vip_episodes_unload: "Episode deaktivieren",
+                vip_episodes_report: "Episode melden",
+                vip_episodes_warning: "Warnung: Nutzergenerierte Inhalte werden nicht geprüft",
+                vip_episodes_load: "Lade Episode mit ID:",
+                vip_episodes_select: "Oder wähle eine Episode:",
+                vip_episodes_back: "Zurück",
+                vip_episodes_submit: "senden",
+                vip_episodes_view_author: "Autor anzeigen",
+                button_start: "Alle Bereit",
+                button_cancel: "Abbrechen",
+                button_changename: "Name ändern",
+                button_sameplayers: "Gleiche Spieler",
+                button_newplayers: "Andere Spieler",
+                prompt_entername: "Gib deinen Namen ein",
+                prompt_choosecharacter: "Wähle deinen Charakter",
+                button_censorOptions: "Zensur Einstellungen",
                 censor_prompt: ""
             }
         }
@@ -17201,7 +17201,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
                         preventAutosize: !0,
                         placeholder: "???-????",
                         inlineSubmit: !0,
-                        inlineSubmitText: this.model.get("strings").vip_episodes_submit || "SUBMIT",
+                        inlineSubmitText: this.model.get("strings").vip_episodes_submit || "SENDEN",
                         className: "lobbyUgcInput"
                     }), a.collection.add({
                         type: "text",
@@ -17346,8 +17346,8 @@ const zC = `<div id="controller" class="state-controller controller-content">
             SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
             LANGUAGE: "Language",
             LOGIN: "Login",
-            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Disconnected",
-            STRING_ERROR_SERVER_ROOM_DESTROYED: "Thanks for playing!"
+            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Verbindung getrennt",
+            STRING_ERROR_SERVER_ROOM_DESTROYED: "Danke für's spielen!"
         },
         fr: {
             LANGUAGE_NAME: "Fran\xE7ais",
@@ -17556,7 +17556,7 @@ const zC = `<div id="controller" class="state-controller controller-content">
             this.promptComponent.model.clear({
                 silent: !0
             }).set(this.model.get("prompt")), this.choicesList.options.block = this.model.get("block"), this.choicesList.collection.set(this.model.get("choices")), this.model.get("type") === "multiple" && Be.all(this.model.get("choices"), t => !t.disabled) && this.choicesList.collection.push({
-                text: "Submit",
+                text: "Senden",
                 action: "submit",
                 block: !1
             }), this.model.get("isAudience") && ((this.model.get("choiceId") === void 0 || this.model.get("choiceId") !== this.getOption("choiceId")) && (this.selected = [], this.audienceChoice = void 0, this.votesLeft = void 0), this.selected.length > 0 && (this.model.get("type") === "multiple" ? this.choicesList.children.forEach(t => {
@@ -21070,7 +21070,7 @@ const jx = rt.View.extend({
     </div>
     <div id="playericon" class="playerIcon"></div>
     <div id="playername" class="playerName controller-text glitchable glitch-header"></div>
-    <div class="captain-indicator off glitchable glitch-text">CAPTAIN</div>
+    <div class="captain-indicator off glitchable glitch-text">KAPITÄN</div>
 </div>
 `,
     zx = Na.extend({
@@ -21097,11 +21097,11 @@ const jx = rt.View.extend({
 </div>
 
 <div class="the-button">
-    <button class="the-button-circle circle glitchable glitch-button">THE<br />BUTTON</button>
+    <button class="the-button-circle circle glitchable glitch-button">DER<br />KNOPF</button>
 </div>
 
 <div class="hurry-button">
-    <button class="hurry-button-circle circle glitchable glitch-hurry">HURRY!</button>
+    <button class="hurry-button-circle circle glitchable glitch-hurry">SCHNELL!</button>
 </div>`,
     Ux = rt.View.extend({
         tagName: "div",
@@ -21175,15 +21175,15 @@ const jx = rt.View.extend({
             })
         },
         startInterval() {
-            this.intervalCount = 0, this.model.set("message", "HOLD TO ACCUSE"), this.model.set("shake", "none"), this.interval = setInterval(this.onInterval.bind(this), 1e3)
+            this.intervalCount = 0, this.model.set("message", "HALTEN, UM ZU BESCHULDIGEN"), this.model.set("shake", "none"), this.interval = setInterval(this.onInterval.bind(this), 1e3)
         },
         onInterval() {
             if (this.intervalCount += 1, this.intervalCount === 1) {
-                this.model.set("message", "ARE YOU SURE?"), this.model.set("shake", "light");
+                this.model.set("message", "BIST DU SICHER?"), this.model.set("shake", "light");
                 return
             }
             if (this.intervalCount === 2) {
-                this.model.set("message", "THIS IS SERIOUS!"), this.model.set("shake", "heavy");
+                this.model.set("message", "DAS IST ERNST!"), this.model.set("shake", "heavy");
                 return
             }
             this.triggerMethod("client:message", {
@@ -21248,7 +21248,7 @@ const jx = rt.View.extend({
             ".count": {
                 observe: "numTimesTested",
                 onGet(t) {
-                    return t === 1 ? "Tested 1 time" : `Tested ${t} times`
+                    return t === 1 ? "1 Mal getestet" : `${t} Mal getestet`
                 },
                 classes: {
                     hidden: {
@@ -21276,10 +21276,10 @@ const jx = rt.View.extend({
             Ws.prototype.onRender.apply(this), this.model.get("choiceId") === "ConfirmedIdentity" && this.model.get("chosen") === null && this.createConfirmDelay()
         },
         createConfirmDelay() {
-            this.model.get("choices")[0].html = "CONFIRM IN 5", this.model.get("choices")[0].disabled = !0;
+            this.model.get("choices")[0].html = "BESTÄTIGEN IN 5", this.model.get("choices")[0].disabled = !0;
             let t = 4,
                 e = window.setInterval(() => {
-                    t ? this.model.get("choices")[0].html = `CONFIRM IN ${t}` : (this.model.get("choices")[0].html = "CONFIRM", this.model.get("choices")[0].disabled = !1, window.clearInterval(e), e = void 0), t -= 1, this.update()
+                    t ? this.model.get("choices")[0].html = `BESTÄTIGEN IN ${t}` : (this.model.get("choices")[0].html = "BESTÄTIGEN", this.model.get("choices")[0].disabled = !1, window.clearInterval(e), e = void 0), t -= 1, this.update()
                 }, 1e3)
         }
     }),
@@ -21293,7 +21293,7 @@ const jx = rt.View.extend({
     Yx = Pa.extend({
         initialize(t) {
             this.buttonsCollection = new Ue.Collection([{
-                text: "submit"
+                text: "Senden"
             }]), this.buttonsComponent = new Vn({
                 childView: bl,
                 block: !0,
@@ -21583,12 +21583,12 @@ const jx = rt.View.extend({
                 <polygon class="inner-3" points="34.4,57.8 20.5,57.8 13.5,69.8 20.5,81.9 34.4,81.9 41.3,69.8"/>
                 <polygon class="outer-3" points="39.1,49.6 15.8,49.6 4.1,69.8 15.8,90 39.1,90 50.7,69.8"/>
             </svg>
-            <p class="title in">Bioscan Report</p>
-            <p class="prompt in">It is up to you to decide what to do with this information.</p>
+            <p class="title in">Bioscan Bericht</p>
+            <p class="prompt in">Du entscheidest, was du mit dieser Info anstellen möchtest.</p>
             <p class="result in">
-                <span class="username"></span> is <span class="role"></span>
+                <span class="username"></span> ist ein <span class="role"></span>
             </p>
-            <p class="help in">NOTICE: Aliens may want to consider lying.</p>
+            <p class="help in">HINWEIS: Aliens könnten eventuell lügen.</p>
         </div>
     </div>
 </div>`,
@@ -21896,7 +21896,7 @@ const jx = rt.View.extend({
         idAttribute: "username",
         responsesText() {
             const t = this.get("responses");
-            return t ? t.length === 1 ? "Tested 1 time" : `Tested ${t.length} times` : ""
+            return t ? t.length === 1 ? "1 Mal getestet" : `${t.length} Mal getestet` : ""
         },
         captainTimeText() {
             const t = this.get("durationAsCaptain");
@@ -22029,7 +22029,7 @@ const jx = rt.View.extend({
             this.triggerMethod("button:censor", this.model)
         }
     }),
-    C1 = '<p class="empty glitchable glitch-text glitch-element">NO RESPONSES TO INVESTIGATE</p>',
+    C1 = '<p class="empty glitchable glitch-text glitch-element">KEINE ANTWORTEN ZUM UNTERSUCHEN</p>',
     x1 = rt.View.extend({
         className: "response active",
         template: Be.template(C1)
@@ -22111,7 +22111,7 @@ const jx = rt.View.extend({
             ".count": {
                 observe: "responses",
                 onGet(t) {
-                    return t ? `${this.model.responsesText()} | ${this.model.captainTimeText()} Captain Time` : ""
+                    return t ? `${this.model.responsesText()} | ${this.model.captainTimeText()} als Kapitän` : ""
                 }
             },
             ".hack-button": {

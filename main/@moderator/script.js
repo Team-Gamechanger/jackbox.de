@@ -15368,9 +15368,9 @@ var ooe = kP((Voe, iR) => {
         },
         T4 = {
             DISCONNECTED: "Vous avez été déconnecté(e).",
-            DRAWING_NOTHING: "Vous devez dessiner quelque chose !",
+            DRAWING_NOTHING: "Vous devez dessiner quelque chose !",
             PLAYER_KICKED: "Vous avez été éjecté(e) de la partie par un modérateur.",
-            ROOM_DESTROYED: "Merci d'avoir joué !",
+            ROOM_DESTROYED: "Merci d'avoir joué !",
             ROOM_DISCONNECTED: "Déconnexion",
             TEXT_NAUGHTY: "Je crains que vous ne puissiez pas écrire ça. Respectez les autres joueurs.",
             TEXT_NOTHING: "Vous ne pouvez pas ne rien entrer",
@@ -15388,7 +15388,7 @@ var ooe = kP((Voe, iR) => {
         },
         O4 = {
             GALLERY_LINK: "Visiter la galerie",
-            PLAY_AGAIN: "Rejouer ?",
+            PLAY_AGAIN: "Rejouer ?",
             BUTTON_SAME_PLAYERS: "Les mêmes joueurs",
             BUTTON_NEW_PLAYERS: "De nouveaux joueurs"
         },
@@ -15399,7 +15399,7 @@ var ooe = kP((Voe, iR) => {
         I4 = {
             BUTTON_SKIP: "Passer",
             BUTTON_NEXT: "Suivant",
-            BUTTON_DONE: "Allons-y !"
+            BUTTON_DONE: "Allons-y !"
         },
         R4 = {
             NAME: "SPECTATEURS"
@@ -15408,20 +15408,20 @@ var ooe = kP((Voe, iR) => {
             EPISODE_REPORT: "Signaler l'épisode",
             EPISODE_UNLOAD: "Retirer l'épisode",
             EPISODE_VIEW_AUTHOR: "Voir l'auteur",
-            EPISODES_LOAD: "Charger un épisode par id :",
+            EPISODES_LOAD: "Charger un épisode par id :",
             EPISODES_MENU: "Menu des épisodes",
-            EPISODES_SELECT: "Ou sélectionner un épisode :",
-            EPISODES_WARNING: "Attention : le contenu généré par les utilisateurs ne fait pas l'objet d'un classement",
+            EPISODES_SELECT: "Ou sélectionner un épisode :",
+            EPISODES_WARNING: "Attention : le contenu généré par les utilisateurs ne fait pas l'objet d'un classement",
             INSTRUCTION: {
                 CREATE_TITLE: "commencez par donner un nom à l'épisode qui contiendra vos sujets, puis touchez créer.",
-                LOAD: "créer ou charger ?",
+                LOAD: "créer ou charger ?",
                 PUBLISH: "publiez votre épisode",
                 TITLE: "donnez un nom à votre épisode",
                 TOGGLE_VISIBILITY: "touchez pour afficher/masquer les sujets",
                 WRITE: "écrivez vos sujets"
             },
             WARNING: {
-                DELETE: "Voulez-vous vraiment supprimer cet épisode ?",
+                DELETE: "Voulez-vous vraiment supprimer cet épisode ?",
                 TOS: "En partageant votre contenu, vous acceptez nos [tos]Conditions de service[/tos]",
                 TOS_AGREE: "accepter et partager"
             },
@@ -15441,7 +15441,7 @@ var ooe = kP((Voe, iR) => {
             },
             RECONNECTED: {
                 TEXT: "RECONNECTÉ(E)",
-                SUBTEXT: "Amusez-vous bien !"
+                SUBTEXT: "Amusez-vous bien !"
             },
             RECONNECTING: {
                 CONTROLLER: {
@@ -16293,13 +16293,13 @@ from your past games list.`,
         e6 = {
             NAME: "NOM",
             NAME_PLACEHOLDER: "INDIQUEZ VOTRE NOM",
-            PASSWORD_PLACEHOLDER: "TAPEZ UN MOT DE PASSE À 5 CHIFFRES",
+            PASSWORD_PLACEHOLDER: "TAPEZ UN MOT DE PASSE À 5 CHIFFRES",
             PASSWORD_REQUIRED_TITLE: "Mot de passe requis",
             PASSWORD_REQUIRED_BODY: "Indiquez le mot de passe ou rejoignez la salle en tant que spectateur.",
             PASSWORD_JOIN_AS_PLAYER: "Rejoindre en tant que joueur",
             PASSWORD_JOIN_AS_AUDIENCE: "Rejoindre en tant que spectateur",
             ROOM_CODE: "CODE DE SALLE",
-            ROOM_CODE_PLACEHOLDER: "TAPEZ LE CODE À 4 LETTRES"
+            ROOM_CODE_PLACEHOLDER: "TAPEZ LE CODE À 4 LETTRES"
         },
         t6 = "Lien vers la page d'accueil de Jackbox Games",
         r6 = {
@@ -16322,11 +16322,11 @@ from your past games list.`,
             NEW: "NOUVEAU",
             PLAYED_ON: "JOUÉE LE",
             REMOVE: {
-                CONFIRM: "Êtes-vous sûr ?",
+                CONFIRM: "Êtes-vous sûr ?",
                 DESCRIPTION: `Cela supprimera définitivement cette partie
 de votre liste d'anciennes parties.`,
-                MANAGE: "Supprimer la partie ?",
-                TITLE: "Êtes-vous sûr ?"
+                MANAGE: "Supprimer la partie ?",
+                TITLE: "Êtes-vous sûr ?"
             }
         },
         i6 = {
@@ -26625,7 +26625,7 @@ ${t}`
         },
         Fne = {
             DISABLED: "Le paramètre de modération est désactivé pour ce jeu. Activez-le et relancez le jeu pour modérer le contenu.",
-            UNSUPPORTED: "Il n'y a rien à modérer dans {gameName}, mais merci d'avoir voulu aider !"
+            UNSUPPORTED: "Il n'y a rien à modérer dans {gameName}, mais merci d'avoir voulu aider !"
         },
         Bne = "Envoyé par :",
         Gne = {
