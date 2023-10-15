@@ -12991,9 +12991,9 @@ ${r.message}`,
         },
         WV = {
             DISCONNECTED: "Vous avez été déconnecté(e).",
-            DRAWING_NOTHING: "Vous devez dessiner quelque chose !",
+            DRAWING_NOTHING: "Vous devez dessiner quelque chose !",
             PLAYER_KICKED: "Vous avez été éjecté(e) de la partie par un modérateur.",
-            ROOM_DESTROYED: "Merci d'avoir joué !",
+            ROOM_DESTROYED: "Merci d'avoir joué !",
             ROOM_DISCONNECTED: "Déconnexion",
             TEXT_NAUGHTY: "Je crains que vous ne puissiez pas écrire ça. Respectez les autres joueurs.",
             TEXT_NOTHING: "Vous ne pouvez pas ne rien entrer",
@@ -13001,8 +13001,8 @@ ${r.message}`,
         },
         VV = "CHARGEMENT",
         qV = {
-            JOINED_COUNT: "1 joueur sur {maxPlayers} a rejoint la partie | {count} joueurs sur {maxPlayers} ont rejoint la partie",
-            PLAYERS_NEEDED: "1 joueur nécessaire pour commencer | {count} joueurs nécessaires pour commencer",
+            JOINED_COUNT: "1 joueur sur {maxPlayers} a rejoint la partie | {count} joueurs sur {maxPlayers} ont rejoint la partie",
+            PLAYERS_NEEDED: "1 joueur nécessaire pour commencer | {count} joueurs nécessaires pour commencer",
             WAITING_FOR_VIP: "En attente de {name} pour commencer la partie",
             WAITING_FOR_GAMEPAD: "En attente du début de la partie",
             GAME_STARTING: "La partie commence",
@@ -13011,7 +13011,7 @@ ${r.message}`,
         },
         HV = {
             GALLERY_LINK: "Visiter la galerie",
-            PLAY_AGAIN: "Rejouer ?",
+            PLAY_AGAIN: "Rejouer ?",
             BUTTON_SAME_PLAYERS: "Les mêmes joueurs",
             BUTTON_NEW_PLAYERS: "De nouveaux joueurs"
         },
@@ -13022,7 +13022,7 @@ ${r.message}`,
         YV = {
             BUTTON_SKIP: "Passer",
             BUTTON_NEXT: "Suivant",
-            BUTTON_DONE: "Allons-y !"
+            BUTTON_DONE: "Allons-y !"
         },
         zV = {
             NAME: "SPECTATEURS"
@@ -13031,20 +13031,20 @@ ${r.message}`,
             EPISODE_REPORT: "Signaler l'épisode",
             EPISODE_UNLOAD: "Retirer l'épisode",
             EPISODE_VIEW_AUTHOR: "Voir l'auteur",
-            EPISODES_LOAD: "Charger un épisode par id :",
+            EPISODES_LOAD: "Charger un épisode par id :",
             EPISODES_MENU: "Menu des épisodes",
-            EPISODES_SELECT: "Ou sélectionner un épisode :",
-            EPISODES_WARNING: "Attention : le contenu généré par les utilisateurs ne fait pas l'objet d'un classement",
+            EPISODES_SELECT: "Ou sélectionner un épisode :",
+            EPISODES_WARNING: "Attention : le contenu généré par les utilisateurs ne fait pas l'objet d'un classement",
             INSTRUCTION: {
                 CREATE_TITLE: "commencez par donner un nom à l'épisode qui contiendra vos sujets, puis touchez créer.",
-                LOAD: "créer ou charger ?",
+                LOAD: "créer ou charger ?",
                 PUBLISH: "publiez votre épisode",
                 TITLE: "donnez un nom à votre épisode",
                 TOGGLE_VISIBILITY: "touchez pour afficher/masquer les sujets",
                 WRITE: "écrivez vos sujets"
             },
             WARNING: {
-                DELETE: "Voulez-vous vraiment supprimer cet épisode ?",
+                DELETE: "Voulez-vous vraiment supprimer cet épisode ?",
                 TOS: "En partageant votre contenu, vous acceptez nos [tos]Conditions de service[/tos]",
                 TOS_AGREE: "accepter et partager"
             },
@@ -13064,7 +13064,7 @@ ${r.message}`,
             },
             RECONNECTED: {
                 TEXT: "RECONNECTÉ(E)",
-                SUBTEXT: "Amusez-vous bien !"
+                SUBTEXT: "Amusez-vous bien !"
             },
             RECONNECTING: {
                 CONTROLLER: {
@@ -27043,13 +27043,13 @@ ${t}`
         },
         hie = {
             INSTRUCTION: "Votez pour la réponse préférée",
-            THANKS: "Merci. Votre choix :"
+            THANKS: "Merci. Votre choix :"
         },
         gie = {
             ANSWER_PLACEHOLDER: "RÉPONSE ICI",
             PROMPT_COUNTER: "Sujet {current} sur {total}",
             PROMPT_FINAL: "Dernier sujet",
-            SAFETY_QUIP_LABEL: "Bloqué ? Essayez un quip de sauvetage",
+            SAFETY_QUIP_LABEL: "Bloqué ? Essayez un quip de sauvetage",
             SAFETY_QUIP_SUBMIT: "Envoyez un quip de sauvetage"
         },
         mie = {
