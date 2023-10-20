@@ -12580,7 +12580,7 @@ class ni {
                 TV_SENTRY_DSN: "https://bb026273d98c4b99ab11c1de369f521f@o420318.ingest.sentry.io/6387933",
                 TV_SENTRY_RATE: "0.2",
                 TV_SLACK_DEBUG: "https://hooks.slack.com/services/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",
-                TV_TWITCH_CLIENT_ID: "yn2iepd23vskpmkzgeg2lkfsct7gsc",
+                TV_TWITCH_CLIENT_ID: "32ghgheygev2ibgh1tiizcphlt8ll3",
                 BASE_URL: "https://bundles.jackbox.tv/main/pp1-lieswatter/",
                 MODE: "production",
                 DEV: !1,
@@ -16807,8 +16807,8 @@ const VC = Et.View.extend({
         },
         onRoomWasDestroyed() {
             Zt.remove("roomCode"), Zt.remove("reconnect"), Ot.show("error", {
-                titleText: "Disconnected",
-                text: "Thanks for playing!",
+                titleText: "Verbindung getrennt",
+                text: "Danke für's spielen!",
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -16816,8 +16816,8 @@ const VC = Et.View.extend({
         },
         onDisconnected() {
             Ot.show("error", {
-                titleText: "Disconnected",
-                text: "You have been disconnected.",
+                titleText: "Verbindung getrennt",
+                text: "Deine Verbindung wurde getrennt.",
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -16886,28 +16886,28 @@ const VC = Et.View.extend({
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
-                vip_postgame: "What would you like to do now?",
-                vip_episodes_menu: "Episodes Menu",
-                vip_episodes_unload: "Unload Episode",
-                vip_episodes_report: "Report Episode",
-                vip_episodes_warning: "Warning: user generated content is not rated",
-                vip_episodes_load: "Load an episode by id:",
-                vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
-                vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
-                button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
-                prompt_choosecharacter: "Select your character",
-                button_censorOptions: "Censor Options",
+                wait: "Lehn dich zurück und entspanne!",
+                vip_waiting: "Warte auf die anderen Spieler",
+                vip_canStart: "Drücke diesen Knopf, wenn alle bereit sind",
+                vip_cancel: "Drücke diesen Knopf, um den Spielstart abzubrechen",
+                vip_postgame: "Was möchtet ihr jetzt machen?",
+                vip_episodes_menu: "Episoden Menü",
+                vip_episodes_unload: "Episode deaktivieren",
+                vip_episodes_report: "Episode melden",
+                vip_episodes_warning: "Warnung: Nutzergenerierte Inhalte werden nicht geprüft",
+                vip_episodes_load: "Lade Episode mit ID:",
+                vip_episodes_select: "Oder wähle eine Episode:",
+                vip_episodes_back: "Zurück",
+                vip_episodes_submit: "senden",
+                vip_episodes_view_author: "Autor anzeigen",
+                button_start: "Alle Bereit",
+                button_cancel: "Abbrechen",
+                button_changename: "Name ändern",
+                button_sameplayers: "Gleiche Spieler",
+                button_newplayers: "Andere Spieler",
+                prompt_entername: "Gib deinen Namen ein",
+                prompt_choosecharacter: "Wähle deinen Charakter",
+                button_censorOptions: "Zensur Einstellungen",
                 censor_prompt: ""
             }
         }
@@ -17346,8 +17346,8 @@ const VC = Et.View.extend({
             SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
             LANGUAGE: "Language",
             LOGIN: "Login",
-            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Disconnected",
-            STRING_ERROR_SERVER_ROOM_DESTROYED: "Thanks for playing!"
+            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Verbindung getrennt",
+            STRING_ERROR_SERVER_ROOM_DESTROYED: "Danke für's spielen!"
         },
         fr: {
             LANGUAGE_NAME: "Fran\xE7ais",
@@ -21033,9 +21033,9 @@ const $x = Et.View.extend({
 				<h3 id="lieswatter-lobby-text" class="lobby-text"></h3>
 
 				<form class="pure-form lobby-form">
-					<button type="submit" id="lieswatter-startgame" class="button-lieswatter button-xlarge pure-button pure-input-1" data-ans="1">EVERYBODY'S IN</button>
-					<button type="button" id="lieswatter-sameplayers" class="button-lieswatter button-xlarge pure-button pure-input-1 lieswatter-endbuttons" data-ans="1">SAME PLAYERS</button>
-					<button type="button" id="lieswatter-newplayers" class="button-lieswatter button-xlarge pure-button pure-input-1 lieswatter-endbuttons" data-ans="0">NEW PLAYERS</button>	
+					<button type="submit" id="lieswatter-startgame" class="button-lieswatter button-xlarge pure-button pure-input-1" data-ans="1">ALLE BEREIT</button>
+					<button type="button" id="lieswatter-sameplayers" class="button-lieswatter button-xlarge pure-button pure-input-1 lieswatter-endbuttons" data-ans="1">GLEICHE SPIELER</button>
+					<button type="button" id="lieswatter-newplayers" class="button-lieswatter button-xlarge pure-button pure-input-1 lieswatter-endbuttons" data-ans="0">ANDERE SPIELER</button>	
 				</form>
 			</div>
 		</div>
@@ -21048,15 +21048,15 @@ const $x = Et.View.extend({
 					<table style="margin-left:auto; margin-right:auto;">
 					<tr>
 						<td style="padding:10px; width=80px;">
-							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>RANK</span><br /></div>
+							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>RANG</span><br /></div>
 							<div style="text-align:center;"><span id="lieswatter-rank" class="ls-rank-button">0</span></div>
 						</td>
 						<td style="padding:10px; width=160px;">
-							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>SCORE</span><br /></div>
+							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>PUNKTE</span><br /></div>
 							<div style="text-align:center;"><span id="lieswatter-score" class="ls-score-button">0</span></div>
 						</td>
 						<td style="padding:10px; width=80px;">
-							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>STREAK</span><br /></div>
+							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>SERIE</span><br /></div>
 							<div style="text-align:center";><span id="lieswatter-combo" class="ls-rank-button">0</span></div>
 						</td>
 					</tr>
@@ -21064,7 +21064,7 @@ const $x = Et.View.extend({
 				</div>
 				
 				<div id="lieswatter-statement-container" class="centered">
-					<br/><span id="lieswatter-category" class="ls-category"></span><br /><span id="lieswatter-statement">WAITING FOR GAME TO START</span><br /><br />
+					<br/><span id="lieswatter-category" class="ls-category"></span><br /><span id="lieswatter-statement">WARTE AUF DEN SPIELSTART</span><br /><br />
 				</div>
 
 				<div id="lieswatter-true-container" class="centered">
@@ -21078,7 +21078,7 @@ const $x = Et.View.extend({
 		</div>
 
 		<div class="pt-page-off state-nothing lieswatter-page" style="background:#515151;" >
-			<br /><span>ANSWER ENTERED!<br /><br />WAITING FOR OTHER PLAYERS.</span><br />
+			<br /><span>ANTWORT ABGEGEBEN!<br /><br />WARTE AUF ANDERE SPIELER.</span><br />
 		</div>
 	</div>
 </div>
@@ -21106,7 +21106,7 @@ const zx = VC.extend({
         else if (i && i.split("_")[0] === "Lobby") {
             this.allowSendAnswer = !0, this.hideLobbyButtons();
             const a = i.split("_")[1];
-            a === "CanStart" ? (ye("#lieswatter-lobby-text").html("Press this button when everybody has joined"), ye("#lieswatter-startgame").show()) : a === "PostGame" && (ye("#lieswatter-lobby-text").html("What do you want to do?"), ye(".lieswatter-endbuttons").show()), this.showScreen(".state-lobby")
+            a === "CanStart" ? (ye("#lieswatter-lobby-text").html("Drücke diesen Knopf, wenn alle bereit sind"), ye("#lieswatter-startgame").show()) : a === "PostGame" && (ye("#lieswatter-lobby-text").html("Was möchtet ihr jetzt machen?"), ye(".lieswatter-endbuttons").show()), this.showScreen(".state-lobby")
         } else if (i === "Gameplay_Round" && n === i) {
             if (t.score === void 0) return;
             ye("#lieswatter-score").html(t.score.score), ye("#lieswatter-combo").html(t.score.combo), Number(t.score.place) >= 0 ? ye("#lieswatter-rank").html(t.score.place + 1) : ye("#lieswatter-rank").html("-"), t.statement !== void 0 && t.statement.text !== void 0 && (ye("#lieswatter-category").html(t.statement.category), ye("#lieswatter-statement").html(t.statement.text)), t.answer !== void 0 && t.answer >= 0 || t.statement && t.statement.text === this.lastQuestion ? (this.showScreen(".state-nothing"), this.lastQuestion = t.statement.text) : (this.allowSendAnswer = !0, this.showScreen(".state-answer"))
