@@ -21080,8 +21080,8 @@ const jx = Et.View.extend({
 				<form class="pure-form">					\r
 					<button type="button" id="drawful-startgame" class="button-drawful button-xlarge pure-button pure-input-1">everybody's in</button>\r
 					<button type="button" id="drawful-stopcountdown" class="button-drawful button-xlarge pure-button pure-input-1">cancel</button>\r
-					<button type="button" id="drawful-sameplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">same players</button>\r
-					<button type="button" id="drawful-newplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">new players</button>	\r
+					<button type="button" id="drawful-sameplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">gleiche spieler</button>\r
+					<button type="button" id="drawful-newplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">andere spieler</button>	\r
 				</form>\r
 			</div>\r
 		</div>\r
@@ -21101,13 +21101,13 @@ const jx = Et.View.extend({
 		<div class="pt-page-off state-drawing-sent drawful-page">\r
 			<div class="container">\r
 				<br /><span id="drawful-drawing-received" class='drawful-text'></span><br />\r
-				<span class='drawful-text'>thanks for your drawing</span><br />\r
+				<span class='drawful-text'>danke für deine zeichnung</span><br />\r
 			</div>\r
 		</div>\r
 \r
 		<div class="pt-page-off state-drawing-done drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>drawing time is over!</span><br />\r
+				<br /><span class='drawful-text'>zeit zum zeichnen ist um!</span><br />\r
 			</div>\r
 		</div>		\r
 \r
@@ -21119,10 +21119,10 @@ const jx = Et.View.extend({
 				<div id="drawful-submit-alert" class="alert alert-info">Alert message goes here</div>\r
 				<form class="pure-form" id="drawful-enterlie-field">\r
 					<div class="pure-u-1">\r
-						<input id="drawful-lie-input" name="drawful-lie" class="pure-input-1 jbg-input" type="text" maxlength="45" placeholder="enter a title" autocapitalize="off" autocorrect="off" autocomplete="off">\r
+						<input id="drawful-lie-input" name="drawful-lie" class="pure-input-1 jbg-input" type="text" maxlength="45" placeholder="gib einen titel ein" autocapitalize="off" autocorrect="off" autocomplete="off">\r
 					</div>\r
 					<div class="pure-u-1 right">\r
-						<button type="submit" id="drawful-submitlie" class="button-drawful button-xlarge pure-button right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;send</button>\r
+						<button type="submit" id="drawful-submitlie" class="button-drawful button-xlarge pure-button right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;senden</button>\r
 						<div id="drawful-submitlie-loading" class="button-drawful-loading right" style="display:none; width: 110px; height: 48px; margin-top:10px;" ></div>\r
 					</div>\r
 				</form>\r
@@ -21150,13 +21150,13 @@ const jx = Et.View.extend({
 \r
 		<div class="pt-page-off state-liereceived drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>title entered!<br />waiting for other players.</span><br />\r
+				<br /><span class='drawful-text'>titel abgesendet!<br />warte auf andere spieler.</span><br />\r
 			</div>\r
 		</div>\r
 \r
 		<div class="pt-page-off state-lyingdone drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>done!</span><br />\r
+				<br /><span class='drawful-text'>fertig!</span><br />\r
 			</div>\r
 		</div>		\r
 \r
@@ -21168,14 +21168,14 @@ const jx = Et.View.extend({
 \r
 		<div class="pt-page-off state-draw drawful-page">\r
 			<!-- <div class="container"> -->\r
-				<span id="drawful-prompt" class='prompt drawful-text'>please draw:</span><br />\r
-				<span id="drawful-instructions" class='instructions drawful-text'>a picture of yourself!</span><br />\r
+				<span id="drawful-prompt" class='prompt drawful-text'>bitte zeichne:</span><br />\r
+				<span id="drawful-instructions" class='instructions drawful-text'>ein bild von dir selbst!</span><br />\r
 \r
 				<canvas class="sketchpad" width='240' height='300' style='background-color:white;'>\r
 					Sorry, your browser is not supported.\r
 				</canvas>\r
 				<form class="pure-form container">\r
-					<button type="submit" id="drawful-submitdrawing" class="submit-drawing button-drawful button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;send</button>\r
+					<button type="submit" id="drawful-submitdrawing" class="submit-drawing button-drawful button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;senden</button>\r
 					<div id="drawful-submitdrawing-loading" style="display:none;" class="button-drawful-loading"></div>\r
 				</form>				\r
 			<!-- </div> -->\r
@@ -21186,7 +21186,7 @@ const jx = Et.View.extend({
 const Hx = lc.extend({
     template: at.template(zx),
     lacksAudience: !0,
-    authorMessages: ["you drew this. think about what you've done.", "you drew this. relax.", "you drew this. wait for everyone to figure out what you did.", "you drew this. there's no taking that back.", "you drew this. take a breather.", "you drew this. you are all-powerful.", "you drew this. how do you feel about it?", "you drew this. this is your fault.", "you drew this. it's... good?", "you drew this. all hail you!", "you drew this. let's see what happens."],
+    authorMessages:  ["du hast das gezeichnet. denke darüber nach, was du getan hast.", "du hast das gezeichnet. entspann dich.", "du hast das gezeichnet. warte, bis alle herausfinden, was du getan hast.", "du hast das gezeichnet. das kannst du nicht mehr zurücknehmen.", "du hast das gezeichnet. mache eine Pause.", "du hast das gezeichnet. du bist allmächtig.", "du hast das gezeichnet. wie fühlst du dich dabei?", "du hast das gezeichnet. das ist deine Schuld.", "du hast das gezeichnet. es ist... gut?", "du hast das gezeichnet. alle huldigen dir!", "du hast das gezeichnet. mal sehen, was passiert."],
     events: {
         "click #drawful-startgame": "startGame",
         "click #drawful-stopcountdown": "stopCountdown",
@@ -21238,9 +21238,9 @@ const Hx = lc.extend({
         if (this.joiningInterfaceIsUp = !1, i && i === "Lobby" && n === i) {
             this.currentCanvas = void 0, this.hideLobbyButtons();
             const f = e.lobbyState;
-            f === "WaitingForMore" ? fe("#drawful-lobby-text").html("waiting for all players to join") : f === "CanStart" ? (fe("#drawful-lobby-text").html("press this button when everybody has joined"), fe("#drawful-startgame").show()) : f === "Countdown" ? (fe("#drawful-lobby-text").html("press this button to cancel game start"), fe("#drawful-stopcountdown").show()) : f === "PostGame" && (fe("#drawful-lobby-text").html("what do you want to do?"), fe(".drawful-endbuttons").show()), this.showScreen(".state-lobby")
+            f === "WaitingForMore" ? fe("#drawful-lobby-text").html("warte bis alle spieler beitreten") : f === "CanStart" ? (fe("#drawful-lobby-text").html("drücke diesen knopf wenn alle beigetreten sind"), fe("#drawful-startgame").show()) : f === "Countdown" ? (fe("#drawful-lobby-text").html("drücke diesen knopf um den spielstart abzubrechen"), fe("#drawful-stopcountdown").show()) : f === "PostGame" && (fe("#drawful-lobby-text").html("was möchtest du jetzt machen?"), fe(".drawful-endbuttons").show()), this.showScreen(".state-lobby")
         } else if (i === "Gameplay_Logo") this.showScreen(".state-nothing");
-        else if (i === "Gameplay_Round") fe(".round-text").html(`ROUND ${e.round}`), this.showScreen(".state-round");
+        else if (i === "Gameplay_Round") fe(".round-text").html(`RUNDE ${e.round}`), this.showScreen(".state-round");
         else if (i === "Gameplay_DrawingTime" && n === "Gameplay_DrawingTime")
             if (t.receivedBitmap) fe("#drawful-drawing-received").html(Ut.safeText(t.prompt)), this.showScreen(".state-drawing-sent");
             else {
@@ -21254,14 +21254,14 @@ const Hx = lc.extend({
         else if (i === "Gameplay_EnterLie" && n === "Gameplay_EnterLie") {
             if (this.activeScreen !== ".state-enterlie" && (t.isAuthor ? (fe("#drawful-lie-input").hide(), fe("#drawful-enterlie-field").hide(), fe("#drawful-submit-alert").hide(), fe("#drawful-submitlie").hide(), fe(".state-enterlie .author-text").html(this.authorMessages[Math.floor(Math.random() * this.authorMessages.length)])) : (fe(".state-enterlie .author-text").html(""), fe("#drawful-lie-input").val(""), fe("#drawful-lie-input").show(), fe("#drawful-enterlie-field").show(), fe("#drawful-submitlie").show(), fe("#drawful-submit-alert").hide())), t.showError) {
                 const f = fe("#drawful-submit-alert");
-                fe("#drawful-submit-alert").html("you entered the correct title! enter a fake one!"), f.addClass("alert-info"), f.removeClass("alert-danger"), f.show()
+                fe("#drawful-submit-alert").html("das ist der richtige titel! gib einen anderen ein!"), f.addClass("alert-info"), f.removeClass("alert-danger"), f.show()
             }
             this.enableLoadingButton("#drawful-submitlie", !0), this.showScreen(".state-enterlie")
         } else if (n === "Gameplay_LieReceived") this.showScreen(".state-liereceived");
         else if (i === "Gameplay_LyingDone") this.showScreen(".state-lyingdone");
         else if (i === "Gameplay_ChooseLie" && n === "Gameplay_ChooseLie")
             if (t.choosingDone || t.chosen != null || t.isAuthor) {
-                t.isAuthor ? fe("#chooselikes-choice").html("") : fe("#chooselikes-choice").html(t.chosen ? `you chose: ${t.chosen}` : "you didn't make a choice"), fe("#chooselikes-text").html("award bonus likes");
+                t.isAuthor ? fe("#chooselikes-choice").html("") : fe("#chooselikes-choice").html(t.chosen ? `deine wahl: ${t.chosen}` : "du hast nichts ausgewählt"), fe("#chooselikes-text").html("vergib bonus likes");
                 const m = "pure-input-1 drawful-like-button button-large pure-button";
                 let _ = "";
                 for (a = 0; a < t.choices.length; a++) {
@@ -21272,7 +21272,7 @@ const Hx = lc.extend({
                 }
                 fe("#drawful-chooselikes").html(_), this.showScreen(".state-chooselikes")
             } else {
-                fe("#chooselie-text").html("What's the real title?");
+                fe("#chooselie-text").html("Was ist der echte Titel?");
                 const m = "pure-input-1 drawful-lie-button button-large pure-button button-drawful";
                 let _ = "";
                 for (a = 0; a < t.choices.length; a++) _ += `<button type="button" data-num="${a}" class="${m}">`, _ += Ut.safeText(t.choices[a]), _ += "</button>";
@@ -21296,7 +21296,7 @@ const Hx = lc.extend({
         e ? (fe(t).show(), fe(`${t}-loading`).hide()) : (fe(t).hide(), fe(`${t}-loading`).show())
     },
     submitDrawing() {
-        if (this.currentCanvas.isClean) return alert("You have to draw something!"), !1;
+        if (this.currentCanvas.isClean) return alert("Du musst etwas zeichnen!"), !1;
         this.enableLoadingButton("#drawful-submitdrawing", !1);
         const t = this.joiningInterfaceIsUp ? {
             setPlayerPicture: !0,
@@ -21310,7 +21310,7 @@ const Hx = lc.extend({
         let t = this.sanitize(fe("#drawful-lie-input").val()).toUpperCase();
         if (t = t.replace(/\s\s+/g, " ").trim(), t.length === 0) {
             const e = fe("#drawful-submit-alert");
-            return fe("#drawful-submit-alert").html("you can't enter nothing!"), e.removeClass("alert-info"), e.addClass("alert-danger"), e.show(), !1
+            return fe("#drawful-submit-alert").html("du musst etwas eingeben!"), e.removeClass("alert-info"), e.addClass("alert-danger"), e.show(), !1
         }
         return this.enableLoadingButton("#drawful-submitlie", !1), this.client.send("SendMessageToRoomOwner", {
             lieEntered: t,
