@@ -21078,8 +21078,8 @@ const jx = Et.View.extend({
 			<div class="container">\r
 				<br /><span id="drawful-lobby-text" class='drawful-text'></span><br />\r
 				<form class="pure-form">					\r
-					<button type="button" id="drawful-startgame" class="button-drawful button-xlarge pure-button pure-input-1">everybody's in</button>\r
-					<button type="button" id="drawful-stopcountdown" class="button-drawful button-xlarge pure-button pure-input-1">cancel</button>\r
+					<button type="button" id="drawful-startgame" class="button-drawful button-xlarge pure-button pure-input-1">alle bereit</button>\r
+					<button type="button" id="drawful-stopcountdown" class="button-drawful button-xlarge pure-button pure-input-1">abbrechen</button>\r
 					<button type="button" id="drawful-sameplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">gleiche spieler</button>\r
 					<button type="button" id="drawful-newplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">andere spieler</button>	\r
 				</form>\r
@@ -21150,7 +21150,7 @@ const jx = Et.View.extend({
 \r
 		<div class="pt-page-off state-liereceived drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>titel abgesendet!<br />warte auf andere spieler.</span><br />\r
+				<br /><span class='drawful-text'>titel abgesendet!<br />warte auf die anderen spieler.</span><br />\r
 			</div>\r
 		</div>\r
 \r
@@ -21228,7 +21228,7 @@ const Hx = lc.extend({
                 this.onResize();
                 return
             }
-            this.enableLoadingButton("#drawful-submitdrawing", !0), this.showScreen(".state-draw"), fe(".drawful .state-draw .instructions").html("a picture of yourself!");
+            this.enableLoadingButton("#drawful-submitdrawing", !0), this.showScreen(".state-draw"), fe(".drawful .state-draw .instructions").html("ein bild von dir selbst!");
             const f = this.$(".drawful .sketchpad")[0],
                 m = f.getContext("2d"),
                 _ = fe("#player").outerHeight(!0) + fe("#drawful-instructions").outerHeight(!0) + fe("#drawful-prompt").outerHeight(!0) + fe("#drawful-submitdrawing").outerHeight(!0) + 10;
