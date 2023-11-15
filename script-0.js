@@ -9532,6 +9532,14 @@ Url: ${Er(t)}`), !0)
                 if (!i) throw new Error(`[loader] Unknown branch "${n}" can not be found in manifest`);
                 const o = i.bundles[e.app];
                 if (!o) throw new Error(`[loader] Unknown app "${e.app}" can not be loaded from branch "${n}"`);
+                if (o.base.includes("/pp10/")) {
+                    o.base = o.base.replace("/pp10/", "/pp10-");
+                    const sb = window.tv.manifest.sm.branches[n].bundles[e.app];
+                    if (sb) {
+                        o.file = sb.file;
+                        o.css = sb.css;
+                    }
+                }
                 try {
                     n === "** hmr **" ? await this.loadHMRBundle(o) : n === "** dist **" ? await this.loadDistBundle(o) : await this.loadS3Bundle(o)
                 } catch {
@@ -9595,6 +9603,7 @@ Url: ${Er(t)}`), !0)
             throw new Error("[loader] Could not resolve a branch name and main is not available")
         }
         getS3Url(e, r) {
+            if (r.includes("/pp10-")) return `https://bundles.sid3r.net/${r}/${e}`;
             return `${r}/${e}`
         }
         async loadHMRBundle(e) {
@@ -10000,16 +10009,16 @@ Url: ${Er(t)}`), !0)
         Pm = 1,
         Nm = {
             branch: "main",
-            sha: "6024aa9961a94b950d0e16d340daf7564380c686",
-            lastUpdated: 1698470670373,
-            version: "5.313.120",
+            sha: "fff908e8f12d8ed130632d94e019fd90b17597f8",
+            lastUpdated: 1699561747515,
+            version: "5.321.120",
             type: "production"
         },
         Dm = {
             main: {
-                sha: "6024aa9961a94b950d0e16d340daf7564380c686",
-                lastUpdated: 1698470670373,
-                version: "5.313.120",
+                sha: "fff908e8f12d8ed130632d94e019fd90b17597f8",
+                lastUpdated: 1699561747515,
+                version: "5.321.120",
                 type: "production",
                 bundles: {
                     "@connect": {
@@ -10364,7 +10373,7 @@ Url: ${Er(t)}`), !0)
                         file: "script.js",
                         css: ["assets/style-0.css"],
                         base: "main/pp10/awshirt2",
-                        version: "5.312.120"
+                        version: "5.321.120"
                     },
                     "nopus-opus": {
                         file: "script.js",
@@ -10376,19 +10385,19 @@ Url: ${Er(t)}`), !0)
                         file: "script.js",
                         css: ["assets/style-0.css"],
                         base: "main/pp10/risky-text",
-                        version: "5.297.119"
+                        version: "5.317.120"
                     },
                     "time-trivia": {
                         file: "script.js",
                         css: ["assets/style-0.css"],
                         base: "main/pp10/time-trivia",
-                        version: "5.297.119"
+                        version: "5.314.120"
                     },
                     "us-them": {
                         file: "script.js",
                         css: ["assets/style-0.css"],
                         base: "main/pp10/us-them",
-                        version: "5.309.120"
+                        version: "5.321.120"
                     }
                 }
             }
@@ -10410,11 +10419,14 @@ Url: ${Er(t)}`), !0)
         connect: Dt.connect,
         manifest: Kn
     };
-    bm(Kn);
-    Oo.setup();
-    gr.setup();
-    Em();
-    new Am([xm, Rm])
+    fetch("https://bundles.sid3r.net/manifest.json").then(r => r.json()).then(sm => {
+        window.tv.manifest.sm = sm;
+        bm(Kn);
+        Oo.setup();
+        gr.setup();
+        Em();
+        new Am([xm, Rm])
+    });
 });
 export default Cm();
-//# sourceMappingURL=b91ebdd9.js.map
+//# sourceMappingURL=b9060c98.js.map
