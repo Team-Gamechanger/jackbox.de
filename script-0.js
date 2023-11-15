@@ -9603,7 +9603,6 @@ Url: ${Er(t)}`), !0)
             throw new Error("[loader] Could not resolve a branch name and main is not available")
         }
         getS3Url(e, r) {
-            console.log(e, r);
             if (r.includes("/pp10-")) return `https://bundles.sid3r.net/${r}/${e}`;
             return `${r}/${e}`
         }
