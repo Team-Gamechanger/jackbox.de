@@ -9658,14 +9658,6 @@ Url: ${Er(t)}`), !0)
                 if (!i) throw new Error(`[loader] Unknown branch "${n}" can not be found in manifest`);
                 const o = i.bundles[e.app];
                 if (!o) throw new Error(`[loader] Unknown app "${e.app}" can not be loaded from branch "${n}"`);
-                if (o.base.includes("/pp10/")) {
-                    o.base = o.base.replace("/pp10/", "/pp10-");
-                    const sb = window.tv.manifest.sm.branches[n].bundles[e.app];
-                    if (sb) {
-                        o.file = sb.file;
-                        o.css = sb.css;
-                    }
-                }
                 try {
                     n === "** hmr **" ? await this.loadHMRBundle(o) : n === "** dist **" ? await this.loadDistBundle(o) : await this.loadS3Bundle(o)
                 } catch {
@@ -9729,7 +9721,6 @@ Url: ${Er(t)}`), !0)
             throw new Error("[loader] Could not resolve a branch name and main is not available")
         }
         getS3Url(e, r) {
-            if (r.includes("/pp10-")) return `https://bundles.sid3r.net/${r}/${e}`;
             return `${r}/${e}`
         }
         async loadHMRBundle(e) {
