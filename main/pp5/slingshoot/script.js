@@ -21027,7 +21027,7 @@ const $x = Et.View.extend({
         model: new Fx({}),
         template: at.template(`${eh}<div class="mech"></div>`),
         update() {
-            this.strings = this.model.get("strings"), this.model.get("gameCanContinue") ? (this.strings.button_sameplayers = "Nächste Phase starten", this.strings.button_newplayers = "Beenden") : (this.strings.button_sameplayers = "Gleiche Spieler", this.strings.button_newplayers = "Andere Spieler"), no.prototype.update.apply(this)
+            this.strings = this.model.get("strings"), this.model.get("gameCanContinue") ? (this.strings.button_sameplayers = "Nächstes Gemetzel starten", this.strings.button_newplayers = "Beenden") : (this.strings.button_sameplayers = "Gleiche Spieler", this.strings.button_newplayers = "Andere Spieler"), no.prototype.update.apply(this)
         }
     });
 const Hx = La.extend({
