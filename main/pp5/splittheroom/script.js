@@ -17463,10 +17463,10 @@ const BC = `<div id="controller" class="state-controller controller-content">
             announcePrompt: !1,
             countGroupName: null,
             strings: {
-                your_choice: "Thank you. Your choice: ",
-                censor_prompt: "Censor this?",
-                censor_confirm: "Yes, Censor!",
-                censor_cancel: "No!"
+                your_choice: "Danke. Deine Wahl: ",
+                censor_prompt: "Zensieren?",
+                censor_confirm: "Ja, zensieren!",
+                censor_cancel: "Nein!"
             }
         }
     }),
